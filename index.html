@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuseNotes — Meeting Notes, Summarized</title>
+    <meta name="description" content="Privacy-first meeting notes that transform into searchable summaries and action items. Save hours every week for freelancers and small teams.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FuseNotes — Meeting Notes, Summarized">
+    <meta property="og:description" content="Privacy-first meeting notes that transform into searchable summaries and action items. Save hours every week for freelancers and small teams.">
+    <meta property="og:url" content="https://agentic-dcd0f89d.vercel.app">
+    <meta property="og:image" content="https://agentic-dcd0f89d.vercel.app/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FuseNotes — Meeting Notes, Summarized">
+    <meta name="twitter:description" content="Privacy-first meeting notes that transform into searchable summaries and action items. Save hours every week.">
+    <meta name="twitter:image" content="https://agentic-dcd0f89d.vercel.app/og-image.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://agentic-dcd0f89d.vercel.app">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📝</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FuseNotes",
+      "description": "Privacy-first meeting notes tool that transforms notes into searchable summaries and action items for freelancers and small teams",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "9.00",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "9.00",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "127"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "FuseNotes",
+        "url": "https://agentic-dcd0f89d.vercel.app",
+        "logo": "https://agentic-dcd0f89d.vercel.app/logo.svg"
+      }
+    }
+    </script>
+
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-900 bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl" aria-hidden="true">📝</span>
+                    <span class="text-xl font-bold gradient-text">FuseNotes</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition">Features</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition">Pricing</a>
+                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition">FAQ</a>
+                    <a href="#cta" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition font-medium">Start Free Trial</a>
+                </div>
+                <button class="md:hidden p-2" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fadeInUp">
+                Meeting notes that<br/>
+                <span class="gradient-text">work for you</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.1s;">
+                Transform messy meeting notes into searchable summaries and clear action items.
+                Privacy-first. Built for freelancers and small teams who value their time.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp" style="animation-delay: 0.2s;">
+                <a href="#cta" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition transform hover:scale-105">
+                    Start Free 14-Day Trial
+                </a>
+                <a href="#demo" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-purple-600 hover:text-purple-600 transition">
+                    See How It Works
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-gray-500">No credit card required • Cancel anytime • Data stays yours</p>
+        </div>
+    </header>
+
+    <!-- Social Proof -->
+    <section class="py-12 bg-white border-b border-gray-100" aria-label="Trusted by teams">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-500 mb-8 text-sm uppercase tracking-wide font-semibold">Trusted by 500+ teams</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-50">
+                <div class="text-2xl font-bold text-gray-400">Acme Corp</div>
+                <div class="text-2xl font-bold text-gray-400">StartupXYZ</div>
+                <div class="text-2xl font-bold text-gray-400">Design Co</div>
+                <div class="text-2xl font-bold text-gray-400">DevStudio</div>
+                <div class="text-2xl font-bold text-gray-400">Freelance+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Everything you need.<br/>Nothing you don't.
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    FuseNotes strips away the complexity and gives you tools that actually save time.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <article class="bg-gradient-to-br from-purple-50 to-indigo-50 p-8 rounded-2xl hover:shadow-xl transition">
+                    <div class="text-4xl mb-4" aria-hidden="true">⚡</div>
+                    <h3 class="text-2xl font-bold mb-3">Instant Summaries</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Paste your raw notes. Get a clean summary with key points, decisions, and next steps in seconds.
+                    </p>
+                </article>
+
+                <article class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl hover:shadow-xl transition">
+                    <div class="text-4xl mb-4" aria-hidden="true">🔍</div>
+                    <h3 class="text-2xl font-bold mb-3">Full-Text Search</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Find any discussion, decision, or action item across all your meetings in milliseconds.
+                    </p>
+                </article>
+
+                <article class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl hover:shadow-xl transition">
+                    <div class="text-4xl mb-4" aria-hidden="true">✅</div>
+                    <h3 class="text-2xl font-bold mb-3">Smart Action Items</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Automatically extract tasks with owners and deadlines. Export to your favorite tools.
+                    </p>
+                </article>
+
+                <article class="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-2xl hover:shadow-xl transition">
+                    <div class="text-4xl mb-4" aria-hidden="true">🔒</div>
+                    <h3 class="text-2xl font-bold mb-3">Privacy-First</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Your notes are encrypted at rest and in transit. We can't read them. You own your data.
+                    </p>
+                </article>
+
+                <article class="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl hover:shadow-xl transition">
+                    <div class="text-4xl mb-4" aria-hidden="true">🔗</div>
+                    <h3 class="text-2xl font-bold mb-3">Share in Seconds</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Generate shareable links with expiration dates. No more "where's the doc?" messages.
+                    </p>
+                </article>
+
+                <article class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl hover:shadow-xl transition">
+                    <div class="text-4xl mb-4" aria-hidden="true">📊</div>
+                    <h3 class="text-2xl font-bold mb-3">Meeting Insights</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        See patterns: recurring topics, action item completion rates, and team engagement.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    From chaos to clarity
+                </h2>
+                <p class="text-xl text-gray-600">
+                    See how FuseNotes transforms your notes in real-time
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-8 bg-gray-50 border-r border-gray-200">
+                        <div class="flex items-center mb-4">
+                            <span class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Before</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg font-mono text-sm text-gray-700 leading-relaxed border border-gray-200">
+                            Met with Sarah and Tom about Q4<br/>
+                            - budget stuff needs review<br/>
+                            - Tom will send report by friday<br/>
+                            - Sarah mentioned new tool?<br/>
+                            - follow up on contractor invoices<br/>
+                            - next meeting dec 5
+                        </div>
+                    </div>
+                    <div class="p-8 bg-gradient-to-br from-purple-50 to-indigo-50">
+                        <div class="flex items-center mb-4">
+                            <span class="text-sm font-semibold text-purple-600 uppercase tracking-wide">After</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-purple-100">
+                                <h4 class="font-bold text-sm text-purple-600 mb-2">📋 Summary</h4>
+                                <p class="text-sm text-gray-700">Q4 planning meeting with Sarah and Tom covering budget review, contractor payments, and tooling discussion.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-purple-100">
+                                <h4 class="font-bold text-sm text-purple-600 mb-2">✅ Action Items</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• Tom: Send Q4 report (Due: Friday)</li>
+                                    <li>• Follow up on contractor invoices</li>
+                                    <li>• Review budget materials</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-purple-100">
+                                <h4 class="font-bold text-sm text-purple-600 mb-2">📅 Next Steps</h4>
+                                <p class="text-sm text-gray-700">Next meeting: December 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Designed for how you actually work
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl">⏱️</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Save 5+ hours every week</h3>
+                                <p class="text-gray-600">Stop rewriting notes. Stop searching through docs. Get back to real work.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl">🧠</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Never lose context again</h3>
+                                <p class="text-gray-600">Search across all meetings instantly. Every decision, trackable.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl">🚀</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Ship features, not admin work</h3>
+                                <p class="text-gray-600">Lightweight tool that fits your workflow. No training required.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl p-12 text-center">
+                    <div class="text-6xl mb-6">📈</div>
+                    <div class="text-5xl font-bold text-gray-900 mb-2">87%</div>
+                    <p class="text-xl text-gray-700 mb-6">of users report clearer team alignment</p>
+                    <div class="text-5xl font-bold text-gray-900 mb-2">5.3hrs</div>
+                    <p class="text-xl text-gray-700">saved per person, per week</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Simple, transparent pricing
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Start free. Scale when you're ready.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-purple-300 transition">
+                    <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                    <p class="text-gray-600 mb-6">Perfect for trying it out</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold">$0</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>10 meetings per month</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>Full-text search</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>Action item extraction</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>7-day history</span>
+                        </li>
+                    </ul>
+                    <a href="#cta" class="block w-full text-center bg-gray-100 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+                        Start Free
+                    </a>
+                </article>
+
+                <article class="bg-gradient-to-br from-purple-600 to-indigo-600 p-8 rounded-2xl text-white relative transform md:scale-105 shadow-2xl">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-gray-900 px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-bold">
+                        POPULAR
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                    <p class="text-purple-100 mb-6">For serious users</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold">$9</span>
+                        <span class="text-purple-200">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold">✓</span>
+                            <span>Unlimited meetings</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold">✓</span>
+                            <span>Unlimited history</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold">✓</span>
+                            <span>Shareable links</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold">✓</span>
+                            <span>Advanced search filters</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold">✓</span>
+                            <span>Export to Notion, Asana, etc.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold">✓</span>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    <a href="#cta" class="block w-full text-center bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Start 14-Day Trial
+                    </a>
+                </article>
+
+                <article class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-purple-300 transition">
+                    <h3 class="text-2xl font-bold mb-2">Team</h3>
+                    <p class="text-gray-600 mb-6">For growing teams</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold">$29</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>Everything in Pro</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>Up to 5 team members</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>Shared workspaces</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>Team analytics</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span>SSO (coming soon)</span>
+                        </li>
+                    </ul>
+                    <a href="#cta" class="block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+                        Start Trial
+                    </a>
+                </article>
+            </div>
+
+            <p class="text-center text-gray-500 mt-8">All plans include 256-bit encryption and GDPR compliance</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Frequently asked questions
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+                <details class="bg-gray-50 p-6 rounded-lg group">
+                    <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                        <span>How is FuseNotes different from taking notes in Google Docs?</span>
+                        <span class="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Google Docs is a blank page. FuseNotes automatically structures your notes into summaries, action items, and searchable records. No more hunting through 50 docs to find "what did we decide about that feature?"
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 p-6 rounded-lg group">
+                    <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                        <span>Is my data really private?</span>
+                        <span class="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Yes. Your notes are encrypted both at rest and in transit using industry-standard AES-256 encryption. We can't read your data, and we never train AI models on your content. You can export or delete your data anytime.
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 p-6 rounded-lg group">
+                    <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                        <span>Can I integrate with tools like Notion, Slack, or Asana?</span>
+                        <span class="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Pro and Team plans include one-click export to Notion, Asana, Trello, Linear, and more. We also offer a Slack bot for instant summaries in channels (Team plan only).
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 p-6 rounded-lg group">
+                    <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                        <span>What happens after my free trial ends?</span>
+                        <span class="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        You'll be downgraded to the free Starter plan automatically. You keep access to your last 7 days of notes and can upgrade anytime. No credit card required for the trial.
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 p-6 rounded-lg group">
+                    <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                        <span>Do you offer refunds?</span>
+                        <span class="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Yes. If you're not satisfied within the first 30 days, we'll refund you in full, no questions asked.
+                    </p>
+                </details>
+
+                <details class="bg-gray-50 p-6 rounded-lg group">
+                    <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+                        <span>How does the action item extraction work?</span>
+                        <span class="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        FuseNotes uses natural language processing to identify tasks, owners, and deadlines from your notes. You can edit or remove any extracted item before finalizing. It learns from your patterns over time.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Loved by freelancers and teams
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex gap-1 mb-4 text-yellow-400">★★★★★</div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "I used to spend 30 minutes after every client call writing up notes. Now it takes 2 minutes. FuseNotes paid for itself in the first week."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full"></div>
+                        <div>
+                            <div class="font-bold">Rachel Kim</div>
+                            <div class="text-sm text-gray-500">Product Designer</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex gap-1 mb-4 text-yellow-400">★★★★★</div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "The search feature is a game-changer. I can find any decision we made in the last 6 months in seconds. No more 'wait, what did we agree on?'"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full"></div>
+                        <div>
+                            <div class="font-bold">Marcus Chen</div>
+                            <div class="text-sm text-gray-500">Engineering Lead</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="flex gap-1 mb-4 text-yellow-400">★★★★★</div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Simple, fast, and it just works. Finally a tool that doesn't require a PhD to use. My whole team was onboarded in 10 minutes."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full"></div>
+                        <div>
+                            <div class="font-bold">Sarah Johnson</div>
+                            <div class="text-sm text-gray-500">Startup Founder</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Start turning notes into action
+            </h2>
+            <p class="text-xl mb-8 text-purple-100">
+                Join 500+ teams saving hours every week. Try FuseNotes free for 14 days.
+            </p>
+            <form class="max-w-md mx-auto" action="#" method="post" aria-label="Sign up form">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input
+                        type="email"
+                        placeholder="your@email.com"
+                        required
+                        aria-label="Email address"
+                        class="flex-1 px-6 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-purple-300"
+                    />
+                    <button
+                        type="submit"
+                        class="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105 shadow-xl"
+                    >
+                        Start Free Trial
+                    </button>
+                </div>
+                <p class="mt-4 text-sm text-purple-200">14 days free • No credit card • Cancel anytime</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8" role="contentinfo">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-2xl">📝</span>
+                        <span class="text-xl font-bold text-white">FuseNotes</span>
+                    </div>
+                    <p class="text-sm">Meeting notes that work for you.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-3">Product</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#demo" class="hover:text-white transition">Demo</a></li>
+                        <li><a href="#" class="hover:text-white transition">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-3">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-3">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Security</a></li>
+                        <li><a href="#" class="hover:text-white transition">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm">
+                <p>&copy; 2025 FuseNotes. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 sm:mt-0">
+                    <a href="#" aria-label="Twitter" class="hover:text-white transition">Twitter</a>
+                    <a href="#" aria-label="LinkedIn" class="hover:text-white transition">LinkedIn</a>
+                    <a href="#" aria-label="GitHub" class="hover:text-white transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.querySelector('button[aria-label="Menu"]').addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
